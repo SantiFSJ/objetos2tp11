@@ -20,7 +20,6 @@ public class Menu {
 		this.acciones = new ArrayList<Accion>();
 		this.pathConfig = pathConfig;
 		this.acciones = leerAccionesDelProperties();
-		imprimirMenu();
 	}
 	
 	public void run() {
