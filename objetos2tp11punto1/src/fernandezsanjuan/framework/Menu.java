@@ -12,14 +12,18 @@ import java.util.Properties;
 import fernandezsanjuan.utilizacion.AccionDos;
 import fernandezsanjuan.utilizacion.AccionUno;
 
-public class Accionador {
+public class Menu {
 	private String pathConfig;
 	private List<Accion> acciones; //properties.get(accion)
 	
-	public Accionador(String pathConfig) {
+	public Menu(String pathConfig) {
 		this.acciones = new ArrayList<Accion>();
 		this.pathConfig = pathConfig;
 		this.acciones = leerAccionesDelProperties();
+		imprimirMenu();
+	}
+	
+	public void run() {
 		imprimirMenu();
 	}
 	
@@ -45,11 +49,7 @@ public class Accionador {
 		return listaDeAcciones;
 	}
 	
-	private void imprimirMenu() {
-		//Esto podria ser otra clase?
-		//Esto se va a cambiar
-		//Como accedemos a las acciones del properties?
-		
+	private void imprimirMenu() {	
 		int i = 1;
 		System.out.println("\nBienvenido, estas son sus opciones: ");
 		for(Accion a: acciones) {
@@ -60,10 +60,6 @@ public class Accionador {
 		System.out.println("Ingrese su opcion: ");
 		
 		leerAccionDeConsola();
-	}
-	
-	private void ejecutarAccion(Accion accion) {
-		accion.ejecutar();
 	}
 	
 	private void leerAccionDeConsola() {
