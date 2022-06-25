@@ -1,10 +1,10 @@
 package ar.unrn.tp11.main;
 
-import fernandezsanjuan.framework.Accionador;
+import fernandezsanjuan.framework.Menu;
 
 public class Main {
 	public static void main(String[] args) {
-		Accionador menu = new Accionador("/frw/config/config.properties");
+		Menu menu = new Menu("/frw/config/config.properties");
 	}
 
 }
